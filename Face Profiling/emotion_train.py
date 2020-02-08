@@ -31,7 +31,7 @@ for index, row in df.iterrows():
            X_test.append(np.array(val,'float32'))
            test_y.append(row['emotion'])
     except:
-        print(f"error occured at index :{index} and row:{row}")
+        print("error occured at index :{index} and row:{row}")
 
 
 num_features = 64
@@ -65,8 +65,6 @@ X_train = X_train.reshape(X_train.shape[0], 48, 48, 1)
 
 X_test = X_test.reshape(X_test.shape[0], 48, 48, 1)
 
-# print(f"shape:{X_train.shape}")
-##designing the cnn
 #1st convolution layer
 model = Sequential()
 
